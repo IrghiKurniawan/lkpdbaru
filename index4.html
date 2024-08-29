@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konten Gambar</title>
+</head>
+<style>
+    #joker {
+        border: 5px solid blue;
+    }
+</style>
+
+<body>
+    <img id="joker" src="gambar1.jpeg" alt="" width="300px" height="200px">
+    <form action="">
+        <div id="war">
+            <select name="gambar" id="gambar" onchange="changeGambar(this)">
+                <option value="gambar1.jpeg">gambar 1</option>
+                <option value="gambar2.jpg">gambar 2</option>
+                <option value="gambar3.jpeg">gambar 3</option>
+            </select><br>
+        </div>
+        <div id="raw">
+            <select name="border" id="border" onchange="changeBorder(this)">
+                <option value="blue">border biru</option>
+                <option value="yellow">border kuning</option>
+                <option value="red">border merah</option>
+            </select><br>
+        </div>
+        <select name="bentuk" id="bentuk" onchange="changeBentuk(this)">
+            <option value="segi">Segitiga</option>
+            <option value="Kotak">Kotak</option>
+            <option value="bulad">Lingkaran</option>
+        </select>
+    </form>
+
+    <script>
+        function changeGambar(e) {
+            const preview = document.getElementById('joker');
+            const pilihGambar = e.value;
+
+            preview.src = pilihGambar;
+
+            preview.style.display = 'block';
+        }
+
+        function changeBorder(c) {
+            const preview = document.getElementById('joker');
+            const pilihBorder = c.value;
+
+            preview.style.borderColor = pilihBorder;
+        }
+
+        function changeBentuk(p) {
+            const preview = document.getElementById('joker');
+            const pilihBentuk = p.value;
+
+            if (pilihBentuk === 'Kotak') {
+                preview.style.borderRadius = '0';
+                preview.style.width = '200px';
+                preview.style.height = '200px'; // Kotak
+                preview.style.clipPath = 'none'; // Reset clip-path
+            } else if (pilihBentuk === 'bulad') {
+                preview.style.borderRadius = '100%'; // Lingkaran
+                preview.style.clipPath = 'none'; // Reset clip-path
+            } else if (pilihBentuk === 'segi') {
+                preview.style.borderRadius = '0'; // Kotak
+                preview.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)'; // Segitiga
+            }
+        }
+    </script>
+</body>
+
+</html>

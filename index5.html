@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1{
+            text-align: center;
+        }
+
+        #timer {
+            background-color: white;
+            color: black;
+            width: 100px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        button {
+            border: none;
+            color: white;
+            background-color:green;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            width: 800px;
+            border-radius: 4px;
+            box-shadow: 0 0 8px black;
+        }
+        button:hover{
+            color: green;
+            transition: 2s;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hitung Mundur</h1>
+    <div id="js-timer">
+        <div id="timer">10</div>
+        <button type="button" class="button-start" id="strtbttn" onclick="start(this)">Mulai</button><br>
+        <button class="button-stop" id="stpbttn" onclick="stop()">Berhenti</button>
+    </div>
+
+    <script>
+        var timer;
+        var ele = document.getElementById('timer');
+        var sec = 10;
+
+        function start(e) {
+            clearInterval(timer); // Hentikan timer sebelumnya jika ada
+            ele.innerHTML = sec;
+            timer = setInterval(() => {
+                sec--;
+                ele.innerHTML = sec;
+                if (sec <= 0) {
+                    clearInterval(timer); // Hentikan timer ketika mencapai 0
+                    sec = 10
+                    ele.innerHTML = "<p style='color:red;'>Waktu Habis</p>";
+                }
+            }, 1000);
+        }
+
+        function stop() {
+            clearInterval(timer); // Hentikan timer
+        }
+    </script>
+</body>
+
+</html>

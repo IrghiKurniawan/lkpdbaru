@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belanja</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #33333300;
+            padding: 20px 30px;
+            border-radius: 3px;
+            box-shadow: 0 0 20px blue;
+        }
+
+        .logo {
+            color: rgb(35, 0, 101);
+            font-size: 24px;
+            font-weight: bold;
+        }
+        span{
+            color: rgb(171, 130, 245);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(5, 101, 0);
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4400ffaa;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 31%;
+            box-shadow: 0 0 20px blue;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h2 {
+            margin: 20px 0;
+            font-size: 22px;
+            color: rgb(5, 101, 0);
+        }
+
+        .card p {
+            padding: 0 20px 20px 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        .card a{
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+            border-radius: 5px;
+            margin: 2px;
+            padding: 4px;
+        }
+        .card a:hover{
+            background-color: #4400ffaa;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="BMW.svg_-300x300.png" alt="" width="20px" height="20px">
+            Ir<span>ghi</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Product</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <img src="IMG_1716279721-Foto Konsumen-Sosis Isi Jeroan, Waspadalah, Meskipun Nikmat!.webp" alt="">
+            <h2>Sosis</h2>
+            <p>Sosis adalah daging kasar atau halus yang dihaluskan untuk memperkecil ukuran partikel, dibuat dari satu atau lebih jenis daging maupun dari hasil samping daging seperti jantung, ginjal dan hati dengan penambahan bumbu-bumbu, bahan curing (opsional), filler dan binder.</p>
+            <h4>Total Purchase : 200+ </h4>
+            <h4>Total Like : 100</h4>
+            <h4><a href="#readmore">read more</a></h4>
+        </div>
+        <div class="card">
+            <img src="nugget_ayam_homemade_frozen_fo_1721051486_5b081ea8_progressive.jpg" alt="">
+            <h2>Nugget</h2>
+            <p>Nugget merupakan produk olahan dari daging giling, diberi penambahan bumbu, dicetak kemudian dilumuri dengan tepung roti pada bagian permukaannya dan digoreng (Syamsir, 2008). Bahan utama pembuatan nugget biasanya berasal dari bahan pangan hewani yaitu daging ayam, daging sapi, dan ikan.</p>
+            <h4>Total Purchase : 400+ </h4>
+            <h4>Total Like : 600</h4>
+            <h4><a href="#readmore">read more</a></h4>
+        </div>
+        <div class="card">
+            <img src="612eea71a2b32.jpg" alt="">
+            <h2>Otak-Otak</h2>
+            <p>Otak – otak adalah makanan khas yang sangat digemari oleh masyarakat Kota Pangkalpinang. Biasanya otak – otak disajikan sebagai camilan saat berkumpul bersama keluarga atau temen. Otak-otak dibuat dari ikan yang diambil dagingnya, kemudian dihaluskan dan dibumbui.p>
+            <h4>Total Purchase : 700+ </h4>
+            <h4>Total Like : 900</h4>
+            <h4><a href="#readmore">read more</a></h4>
+        </div>
+    </div>
+
+</body>
+
+</html>
